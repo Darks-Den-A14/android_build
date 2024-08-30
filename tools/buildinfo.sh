@@ -50,6 +50,10 @@ echo "ro.wifi.channels=$PRODUCT_DEFAULT_WIFI_CHANNELS"
 echo "# ro.build.product is obsolete; use ro.product.device"
 echo "ro.build.product=$TARGET_DEVICE"
 
+echo "# CTS attestion fingerprint description"
+echo "persist.sys.pihooks_mainline_FINGERPRINT=$PIHOOKS_BUILD_FINGERPRINT"
+echo "persist.sys.pihooks_mainline_MODEL=$PIHOOKS_MODEL_SPOOF"
+
 echo "# Do not try to parse description or thumbprint"
 echo "ro.build.description?=$PRIVATE_BUILD_DESC"
 if [ -n "$BUILD_THUMBPRINT" ] ; then
